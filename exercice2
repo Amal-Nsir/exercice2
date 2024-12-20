@@ -1,0 +1,61 @@
+Exercice 2: Création d'un blog multi-utilisateurs
+Cet exercice vous permettra de concevoir un blog multi-utilisateur.
+
+Structure du site
+Le site est constitué de six fichiers aux rôles bien définis :
+1.	index.php : 
+
+C’est la page d'accueil du blog. 
+
+Elle contient des liens vers les blogs existants, ainsi que deux autres liens : 
+l’un vers la page d’inscription des nouveaux utilisateurs et 
+
+l’autre vers la page d’identification pour les utilisateurs déjà inscrits qui souhaitent ajouter un nouvel article.
+2.	inscription.php : Cette page permet aux nouveaux utilisateurs de s’inscrire en saisissant un nom et un mot de passe. 
+Ces informations sont ensuite enregistrées dans la base de données MySQL, dans la table "user".
+
+
+étape 1 : création de la BD                         done!
+étape 2 : Création de la table "user"                done!
+étape 3 : création de formulaire HTML               done!
+étape 4 : Récupération des informations             done!     
+étape 5 : l'enregistrement de l 'utilisateur à la Base de données
+            - connexion avec ma BD              DONE!
+            -génération de la reuête d'inscription DONE!
+            - exécuter la requête .
+
+
+
+3.	identification.php : 
+
+Ce fichier vérifie si l’utilisateur est bien inscrit avant de lui permettre d’ajouter un article. 
+
+Si l'utilisateur n'est pas enregistré, il est redirigé.
+
+étape 1: préparation de formulaire HTML    Done !
+étape 2 : récupération de données           Done!
+étape 3 : Vérification de nom et mot de passe :
+                - connexion avec DB
+                -fonction (Nom, Mot de passe ) ==> True/False               done!
+                            - créer une requête SQL Select 
+                - si True ==>  ecrire.php 
+                - sinon ==> inscription.php
+
+
+4.	ecrire.php : Dans ce fichier, l'utilisateur peut saisir un nouvel article à l'aide d'un formulaire,
+en précisant également le titre et la catégorie de l'article.
+
+étape 1 : préparation de formulaire HTML
+étape 2 : récuperation de données
+            - les champs de type text, select
+            -upload le fichier 
+étape 3: insertion de l'enregistrement à la BD
+            -création de la table articles
+            - fonction (titre, catégorie , image)
+                    - connexion avec la BD  
+                    - génération de la requête d'insertion 
+                    -exécution de la requête 
+
+
+5.	stockage.php : Ce fichier enregistre l'article soumis dans la base de données MySQL, plus précisément dans la table "articles".
+6.	affichage.php : Ce fichier permet d'afficher tous les articles d'un utilisateur choisi depuis la page d'accueil, dans une seule page.
